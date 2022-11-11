@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/lock.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password generator</title>
+  </head>
+  <body>
+    <script type="module" src="./src/main.ts"></script>
+    <div class="generator">
+      <h1 class="app-title">Password generator</h1>
+      <div class="header">
+        <p class="passwd-result">P4$5W0rD!</p>
+        <div id="copy-icon">
+          <img src="./src/images/copy.svg" alt="copy-icon" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="generator-info">
+          <p class="passwd-length">Character Length</p>
+          <p class="passwd-number">10</p>
+        </div>
+        <input type="range" min="6" max="24" value="10" class="custom-range" />
+        <div class="customization-label">
+          <ul>
+            <li>
+              <input type="checkbox" id="hasUppercase" />
+              <label for="hasUppercase">Include Uppercase Letters</label>
+            </li>
+            <li>
+              <input type="checkbox" id="hasLowercase" />
+              <label for="hasLowercase">Include Lowercase Letters</label>
+            </li>
+            <li>
+              <input type="checkbox" id="hasNumber" />
+              <label for="hasNumber">Include Numbers</label>
+            </li>
+            <li>
+              <input type="checkbox" id="hasSymbol" />
+              <label for="hasSymbol">Include Symbols</label>
+            </li>
+          </ul>
+        </div>
+        <div class="strengh">
+          <p class="strengh-text">Strength</p>
+          <div class="passwd-strengh">
+            <div class="strength-level">
+              <p id="strength-level-text"></p>
+              <div class="strength-bar"></div>
+              <div class="strength-bar"></div>
+              <div class="strength-bar"></div>
+              <div class="strength-bar"></div>
+            </div>
+          </div>
+        </div>
+        <button class="passwd-cta">
+          Generator <img src="./src/images/arrow.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
